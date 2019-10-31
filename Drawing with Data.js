@@ -32,11 +32,11 @@ var circles = svg.selectAll("circle") // selectAll() will return empty reference
                   .append("circle");  // append() adds a circle to the DOM - in this case appending circles to the end of the SVG element
 
 
-circles.attr("cx", function(d, l) {
-            return (l * 50) + 25;
-        })
-        .attr("cy", h/2)
-        .attr("r", function (d) {
+circles.attr("cx", function(d, i) {   // cx is the x-position value of the center of the circle
+            return (i * 50) + 25;     // d is the data value; i is the index value (auto populated by D3)
+        })                            // so each circle is getting pushed to the right (0 * 50) + 25, etc.
+        .attr("cy", h/2)              // cy is the y-position value of the center of each circle (h = 50)
+        .attr("r", function (d) {     // r is the radius of the circle, which we set to the data value
               return d;
         });
 
