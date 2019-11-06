@@ -41,7 +41,7 @@ var rScale = d3.scaleLinear()
 var svg = d3.select("body")	// This inserts a new <svg> element just before closing the </body> tag,
 	    .append("svg")	// and assigns the given width/height.
 	    .attr("width", w + padding)
-	    .attr("height", h + padding)
+	    .attr("height", h + padding);
 
 svg.selectAll("circle")		// take all the datapoints and structure them
 	    .data(dataset)	// data() binds our data to the elements we're about to create
@@ -49,7 +49,7 @@ svg.selectAll("circle")		// take all the datapoints and structure them
             .append("circle")	// append circles to the end of the SVG element
 	    .attr("cx", function(d) { return xScale(d[0]); }) // return the scaled element
 	    .attr("cy", function(d) { return yScale(d[1]); }) 
-	    .attr("r", function(d) { return rScale(d[1]); }) 
+	    .attr("r", function(d) { return rScale(d[1]); }); 
 
 
 // Add Labels
@@ -60,7 +60,7 @@ svg.selectAll("text")
 		.text(function(d) { return d[0] + "," + d[1]; }) // specify the text elements contents
 		.attr("x", function(d) { return xScale(d[0]); }) // specify text position with scale
 		.attr("y", function(d) { return yScale(d[0]); }) 
-		.attr("r", function(d) { return rScale(d[0]); })
+		.attr("r", function(d) { return rScale(d[0]); });
 		
 
 
