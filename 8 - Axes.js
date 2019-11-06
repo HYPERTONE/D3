@@ -1,10 +1,11 @@
 
 // ---------- 
-// 1. Set height, width, padding
-// 2. Create Scale
-// 3. Create Axis/Axes
+// 1. Declare height, width, padding
+// 2. Construct Scale
+// 3. Construct Axis/Axes
 // 4. Create SVG element
-// 5. Add Labels
+// 5. Create Labels
+// 6. Create Axis/Axes
 
 
 // Set height, width, padding
