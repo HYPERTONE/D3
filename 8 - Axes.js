@@ -30,20 +30,20 @@ var rScale = d3.scaleLinear()
 	       .domain([0, d3.max(dataset, function(d) { return d[1]; })])
 	       .range([0, 10]);
 
-//var formatAsPercentage = d3.format(".1%");
+var formatAsSigned = d3.format("+5");
 
 // Create Axes
 // X Axis
 var xAxis = d3.axisBottom()
 	      .scale(xScale) 			// each axis needs to be told at what scale to operate
-	      .ticks(5);			// set rough number of ticks
-	    //.tickFormat(formatAsPercentage); // set format style
+	      .ticks(5)				// set rough number of ticks
+	      .tickFormat(formatAsSigned); 	// set format style
 
 // Y Axis
 var yAxis = d3.axisLeft()
 	      .scale(yScale) 
-	      .ticks(5);	
-	    //.tickFormat(formatAsPercentage); 
+	      .ticks(5)	
+	      .tickFormat(formatAsSigned); 
 
 // Create SVG element
 var svg = d3.select("body")		// Insert new <svg> element before </body>
