@@ -6,7 +6,7 @@
 // A scale's output range is the range of possible output values, commonly used as display values in pixel units.
 
 
-----------
+// ---------- 
 // 1. Set height, width, padding
 // 2. Create scales
 // 3. Create SVG element
@@ -64,7 +64,7 @@ svg.selectAll("text")
 		
 
 
-
+// ----------
 
 
 
