@@ -29,11 +29,11 @@ var dataset = [
 
 var xScale = d3.scaleLinear()
                 .domain([0, d3.max(dataset, function(d) { return d[0]; })])
-                .range([0, w]);
+                .range([0, w]);			// or if we wanted edge padding: .range([padding, w - padding * 2]);
 
-var xScale = d3.scaleLinear()             // or if we wanted to create some edge padding
-							.domain([0, d3.max(dataset, function (d) { return d[0]; })])
-							.range([padding, w - padding * 2]); 
+var yScale = d3.scaleLinear()             
+		.domain([0, d3.max(dataset, function (d) { return d[1]; })])
+		.range([0, h]); 
 
 
 
