@@ -104,3 +104,5 @@ schemeCategory20b
 schemeCategory20c
 
 scaleTime             // scale method for date and time values, with special handling of ticks for dates
+
+scaleBand	      // ordinal scale; used for ordinal data (categories: freshman, sophomore, junior, senior)
