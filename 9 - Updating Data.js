@@ -69,7 +69,7 @@ svg.selectAll("text")
    })
    .attr("text-anchor", "middle")
    .attr("x", function(d, i) {
-      return xScale(i) + xScale.bandwidth() / 2;
+      return xScale(i) + xScale.bandwidth() / 2;    // bandwith automatically calculates the barpadding 
    })
    .attr("y", function(d) {
       return h - yScale(d) + 14;
@@ -80,7 +80,53 @@ svg.selectAll("text")
 
 
 
-
+// On click, update with new data
+d3.select("p")      // select <p> on click
+  .on("click", function() {
+      
+      // new values for dataset
+      dataset = [ 11, 12, 15, 20, 18, 17, 16, 18, 23, 25,    
+                  5, 10, 13, 19, 21, 25, 22, 18, 15, 13 ];
+  
+      // update all rects
+      svg.selectAll("rect")
+         .data(dataset)
+         .attr("y", function(d) {
+              return h - yScale(d);
+          })
+         .attr("height", function(d) {
+              return yScale(d);
+          })
+         .attr("fill", function(d) {
+              return "rgb(0, 0, " + Math.round(d * 10) + ")";
+          });
+  
+      // update all labels
+      svg.selectAll("text")
+         .data(dataset)
+         .text(function (d) {
+              return d;
+         })
+         .attr("x", function(d, i) {
+              return xScale(i) + xScale.bandwidth() / 2;
+         })
+         .attr("y", function(d) {
+              return h - yScale(d) + 14;
+         });
+});
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
