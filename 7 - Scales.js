@@ -106,3 +106,15 @@ schemeCategory20c
 scaleTime             // scale method for date and time values, with special handling of ticks for dates
 
 scaleBand	      // ordinal scale; used for ordinal data (categories: freshman, sophomore, junior, senior)
+
+
+// Ordinal Scales
+
+d3.scaleBand() // is used for ordinal data
+.domain(d3.range(dataset.length)) // returns the full range incremented by 1
+.domain(["freshman", "sophomore", "junior", "senior"]) // explicitly sets the domain bands
+
+.range([0, w]) // calculates even bands (or bars) starting at 0 and ending at w
+.rangeRound([0, w]) // rounds to the nearest whole pixel so everything looks crisp
+
+.paddingInner(0.05) // specifies the bands (or bars) to have some padding so they're not touching
