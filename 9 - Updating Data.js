@@ -58,6 +58,30 @@ svg.selectAll("rect")               // take all the datapoints and structure the
    });
 
 
+// Create Labels
+
+svg.selectAll("text")
+   .data(dataset)
+   .enter()
+   .append("text")
+   .text(function(d) {
+      return d;
+   })
+   .attr("text-anchor", "middle")
+   .attr("x", function(d, i) {
+      return xScale(i) + xScale.bandwidth() / 2;
+   })
+   .attr("y", function(d) {
+      return h - yScale(d) + 14;
+   })
+   .attr("font-family", "sans-serif")
+   .attr("font-size", "11px")
+   .attr("fill", "white");
+
+
+
+
+
 
 
 
