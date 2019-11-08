@@ -1,3 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TestD3</title>
+		<script type="" src="d3.js"></script>
+		<style>
+			
+			div.bar {
+				display: inline-block;
+				width: 20px;
+				height: 75px;
+				background-color: teal;
+				margin-right: 2px;
+			}
+			
+			.axis path
+			.axis line {
+				stroke: teal;
+				shape-rendering: crispEdges;
+			}
+			
+			.axis text {
+				font-family: Optima, Futura, sans-serif;
+				font-weight: bold;
+				font-size: 14px;
+				fill: teal;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+		<p>Click on this text to update the chart with new data values (once).</p>
+	
+		<script type="">
+
 
 // ---------- 
 // ---------- Updating Data
@@ -11,17 +48,17 @@
 // 6. Create Axis/Axes
 
 // 1. Add an event listener
-// 2. Rebind new values to existing elements
-// 3. Update visual attributes, referencing the data values
+// 2. Update data, scale, all rects, all labels
 
 
-transition() // D3 evaluates every attr() statement immediately and thus transitions them in time
-duration() // Controls the transition() time; default is 250 ms; must be specified after transition()
-ease(d3.easeLinear) // Controls the quality of motion ('easing into place')
-  ease(d3.easeCircleIn) // ease in until elements snap into place
-  ease(d3.easeElasticOut) // springy
-  ease(d3.easeBounceOut) // like a ball bouncing and coming to rest
-delay() // specifies when the transition() begins; the delay happens first, followed by the transition itself
+
+// transition() // D3 evaluates every attr() statement immediately and thus transitions them in time
+// duration() // Controls the transition() time; default is 250 ms; must be specified after transition()
+// ease(d3.easeLinear) // Controls the quality of motion ('easing into place')
+//   ease(d3.easeCircleIn) // ease in until elements snap into place
+//   ease(d3.easeElasticOut) // springy
+//   ease(d3.easeBounceOut) // like a ball bouncing and coming to rest
+// delay() // specifies when the transition() begins; the delay happens first, followed by the transition itself
 
 
 
@@ -147,7 +184,9 @@ d3.select("p")
   });
    
          
-         
+		</script>
+	</body>
+</html>
          
          
          
