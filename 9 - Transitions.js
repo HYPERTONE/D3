@@ -37,7 +37,7 @@
 
 
 // ---------- 
-// ---------- Updating Data
+// ---------- Transitions
 // ---------- 
 
 // 1. Declare height, width, padding
